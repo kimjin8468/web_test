@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안심초등학교 이순신 장군 독서 골든벨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        /* 기본 스타일 설정 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #fce4ec; /* 배경: 연한 핑크 */
+        }
+
+        /* 슬라이드 컨테이너 */
+        .presentation-container {
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory; /* 스크롤 시 슬라이드 단위로 멈추게 함 */
+        }
+
+        /* 개별 슬라이드 스타일 */
+        .slide {
+            width: 90%;
+            max-width: 900px;
+            height: 90vh;
+            margin: 5vh auto;
+            background-color: #fffde7; /* 슬라이드 배경: 연한 노랑 */
+            border: 1px solid #ddd;
+            border-radius: 20px; /* 더 둥글게 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            scroll-snap-align: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* 제목 슬라이드 스타일 */
+        .title-slide {
+             background: linear-gradient(135deg, #ffab91, #ffcc80); /* 주황-노랑 그라데이션 */
+             color: #424242; /* 어두운 회색 글씨 */
+        }
+        
+        .title-slide h1 {
+            font-size: clamp(2.5em, 10vw, 4.5em); /* 화면 크기에 따라 글자 크기 조절 */
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .school-name {
+            font-size: clamp(1.5em, 7vw, 2.2em);
+            margin-bottom: 25px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .title-slide p {
+            font-size: clamp(1.2em, 5vw, 1.5em);
+        }
+
+        /* 슬라이드 번호 스타일 */
+        .slide-header {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 2em;
+            color: #00897b; /* 청록색 */
+            font-weight: bold;
+        }
+        
+        /* 질문 텍스트 스타일 */
+        .question {
+            font-size: clamp(1.5em, 6vw, 2.4em); /* 화면 크기에 따라 조절 */
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* '정답 보기' 버튼을 감싸는 details 태그 */
+        details {
+            margin-top: 20px;
+        }
+
+        /* '정답 보기' 버튼(summary) 스타일 */
+        summary {
+            cursor: pointer;
+            background-color: #4dd0e1; /* 밝은 하늘색 */
+            color: #333;
+            padding: 14px 28px;
+            border-radius: 30px; /* 더 둥글게 */
+            font-size: 1.2em;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        summary:hover {
+            background-color: #26c6da;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* 정답이 나타나는 박스 스타일 */
+        .answer-box {
+            margin-top: 25px;
+            padding: 30px;
+            background-color: #c8e6c9; /* 연한 녹색 */
+            border: 2px dashed #388e3c; /* 진한 녹색 */
+            border-radius: 15px;
+            width: 85%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        /* 정답 텍스트 스타일 */
+        .answer-text {
+            font-size: clamp(1.4em, 5vw, 2em); /* 화면 크기에 따라 조절 */
+            color: #d32f2f; /* 진한 빨강 */
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <div class="slide title-slide">
+            <h1>이순신 장군<br>독서 골든벨</h1>
+            <h2 class="school-name">안심초등학교</h2>
+            <p>아래로 스크롤하여 퀴즈를 시작하세요!</p>
+        </div>
+
+        <!-- 각 문제 슬라이드가 여기에 순서대로 들어갑니다. -->
+        <!-- 문제 1 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 1</h2>
+            <p class="question">이순신 장군이 전라남도 여수시 돌산에 있는 방답의 관리들에게 곤장을 때린 이유는 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">전쟁에 쓸 배를 고치지 않아서</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 2 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 2</h2>
+            <p class="question">성 아래 살던 석수장이 박몽세가 곤장 80대를 맞은 이유는 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">이웃집 개를 잡아먹고 피해를 입혀서</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 3 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 3</h2>
+            <p class="question">1592년 2월 8일, 이순신 장군은 거북선에 쓰일 '이것'을 스물아홉 필 받았습니다. '이것'은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">돛 베</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 4 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 4</h2>
+            <p class="question">좌의정 유성룡이 이순신 장군에게 보낸 책의 이름은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">증손전수방략</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 5 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 5</h2>
+            <p class="question">1592년 3월 27일, 이순신 장군은 거북선에서 어떤 무기를 쏘는 시험을 했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">대포</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 6 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 6</h2>
+            <p class="question">이순신 장군은 신라 시대의 배 만드는 기술과 고려 시대의 '이것' 기술을 합쳐 거북선을 만들었습니다. '이것'은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">화포 기술</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 7 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 7</h2>
+            <p class="question">1592년 4월 14일, 일본군이 부산으로 쳐들어오면서 시작된 전쟁의 이름은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">임진왜란</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 8 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 8</h2>
+            <p class="question">동래성을 지키던 송상현 장군은 '싸워 죽기는 쉬워도 OOOO는 어렵다'고 말하며 일본군에 맞서 싸웠습니다. OOOO에 들어갈 말은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">길을 비키기</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 9 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 9</h2>
+            <p class="question">전쟁이 무서워 도망갔던 여도 수군 황옥천은 어떤 벌을 받았나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">목을 베어 군중들 앞에 높이 매달았다.</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 10 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 10</h2>
+            <p class="question">조선 수군이 바다에서 주로 탔던 2층으로 된 배의 이름은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">판옥선</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 11 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 11</h2>
+            <p class="question">1592년 5월 29일 사천 싸움에서 이순신 장군은 몸의 어느 부위에 총알을 맞았나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">왼쪽 어깨</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 12 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 12</h2>
+            <p class="question">한산도 앞바다에서 이순신 장군이 학이 날개를 편 모양으로 진을 치고 싸운 전술의 이름은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">학익진</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 13 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 13</h2>
+            <p class="question">사천 싸움에서 처음으로 등장하여 일본군들이 '귀신 배'라고 부르며 두려워했던 배는 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">거북선</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 14 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 14</h2>
+            <p class="question">1593년, 이순신 장군은 세 개 도의 수군을 모두 지휘하는 '이 직책'에 임명되었습니다. 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">삼도 수군 통제사</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 15 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 15</h2>
+            <p class="question">1593년 2월, 명나라 장수 이여송은 5만 명의 병사를 이끌고 와 조선군과 함께 빼앗긴 '이곳'을 되찾았습니다. 어디일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">한양</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 16 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 16</h2>
+            <p class="question">원균은 공을 세우고 싶은 욕심에 부하를 시켜 죄 없는 '이 사람들'의 목을 베어 오게 했습니다. 누구의 목이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">어부</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 17 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 17</h2>
+            <p class="question">이순신 장군은 일본군의 조총을 연구한 끝에, 일본의 것보다 더 뛰어난 우리만의 '이것'을 만드는 데 성공했습니다. 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">조총</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 18 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 18</h2>
+            <p class="question">순천 거북선의 격군(노 젓는 병사)이었던 종태수는 도망가다 잡혀와 어떤 벌을 받았나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">사형</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 19 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 19</h2>
+            <p class="question">1594년 1월, 어머니를 만나고 떠나는 이순신에게 어머니는 "부디 나라의 OOOO을 꼭 씻어야 한다"고 당부하셨습니다. OOOO은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">부끄러움</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 20 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 20</h2>
+            <p class="question">조선 시대에는 천민이 군대에 가지 않아도 됐지만, 임진왜란 때는 천민도 군인이 되었습니다. 대신 나라에서는 공을 세운 천민에게 어떤 상을 내렸나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">천민의 신분을 면해주고 평민으로 만들어 주었다.</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 21 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 21</h2>
+            <p class="question">1594년 3월 6일, 명나라 도사부 담종인은 이순신에게 일본군을 OOOO 말라는 내용의 문서를 보냈습니다. OOOO에 들어갈 말은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">공격하지</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 22 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 22</h2>
+            <p class="question">1594년 8월, 이순신 장군은 도둑의 얼굴에 '도둑 도(盗)' 자를 '이것'으로 새겨 넣는 벌을 내렸습니다. '이것'은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">먹물</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 23 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 23</h2>
+            <p class="question">장문포 싸움에서는 수군과 육군이 힘을 합쳐 공격했습니다. 이때 붉은 옷을 입고 싸워 '홍의 장군'으로 알려진 의병장은 누구였나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">곽재우</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 24 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 24</h2>
+            <p class="question">1595년 1월, 배 네 척이 불에 타버리는 안타까운 사고가 있었습니다. 어느 배에서 시작된 불이 번진 것이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">여도 배</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 25 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 25</h2>
+            <p class="question">1595년 5월 4일, 어머니의 생신날 이순신 장군은 무엇을 하고 있었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">홀로 배 위에 앉아 바다를 지켰다.</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 26 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 26</h2>
+            <p class="question">1595년 8월 15일, 한산섬 수루에 홀로 앉아 나라를 걱정하며 이순신 장군이 읊은 시조의 첫 구절은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">한산섬 달 밝은 밤에</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 27 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 27</h2>
+            <p class="question">이순신 장군이 체찰사와 이야기하며 백성들의 가장 큰 고통이라고 말한 것은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">배고픈 고통</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 28 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 28</h2>
+            <p class="question">1597년 4월, 감옥에서 풀려난 이순신 장군은 남쪽으로 길을 떠나던 중, 어머니가 어떻게 되셨다는 비극적인 소식을 들었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">오시던 배 위에서 돌아가셨다는 소식</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 29 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 29</h2>
+            <p class="question">원균이 칠천량 싸움에서 크게 패하고 목숨을 잃자, 임금은 이순신을 다시 어떤 직책에 임명했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">삼도 수군 통제사</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 30 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 30</h2>
+            <p class="question">이순신 장군은 수군을 없애라는 임금의 명령에 "신에게는 아직 OO척의 배가 있습니다."라고 말하며 맞서 싸울 것을 청했습니다. 몇 척의 배였을까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">12척</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 31 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 31</h2>
+            <p class="question">이순신은 원래 수군이 아닌 어떤 군대의 장수였나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">육군</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 32 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 32</h2>
+            <p class="question">1592년 4월, 일본군 배 90여 척이 부산 앞바다에 나타났다고 보고한 장수는 누구인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">경상 우수사 원균</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 33 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 33</h2>
+            <p class="question">이순신 장군은 일본군의 머리를 베는 공을 세우지 못했더라도 어떻게 한 사람들에게 상을 주려고 했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">죽을 힘을 다해 싸운 사람들</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 34 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 34</h2>
+            <p class="question">경상 우수사 원균이 이순신 장군을 헐뜯기 위해 조정에 올린 거짓 보고의 내용은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">이순신이 머뭇거리며 싸우려 하지 않는다는 내용</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 35 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 35</h2>
+            <p class="question">이순신 장군이 배를 만들기 위해 각 고을에서 모은 목수, 즉 자귀장이들은 총 몇 명이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">214명</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 36 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 36</h2>
+            <p class="question">1596년 5월, 이순신 장군이 쇠를 녹여 직접 만든 무기는 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">총 두 자루</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 37 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 37</h2>
+            <p class="question">이순신 장군은 수군 장수들끼리 사이좋게 지내라는 임금님의 꾸중을 듣고 부끄러워했습니다. 그는 누구 때문에 이런 일이 생겼을 것이라고 짐작했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">경상 우수사 원균</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 38 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 38</h2>
+            <p class="question">꿈에서 외로운 섬이 달려와 멈추는 것을 본 이순신 장군은 이 꿈이 일본군이 스스로 어떻게 될 징조라고 해석했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">스스로 멸망할 징조</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 39 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 39</h2>
+            <p class="question">1595년 5월, 종 춘세의 실수로 집 열 채가 불에 탔을 때, 다행히 불이 옮겨붙지 않은 곳은 어디였나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">할머니(이순신의 어머니)가 계신 집</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 40 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 40</h2>
+            <p class="question">1596년 4월, 이순신 장군이 듣고 매우 기뻐했던 소문은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">도요토미 히데요시(풍신수길)가 죽었다는 소문</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 41 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 41</h2>
+            <p class="question">옥에서 풀려난 이순신은 누구의 부하가 되어 다시 전쟁터로 나갔나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">도원수 권율</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 42 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 42</h2>
+            <p class="question">어머니의 시신을 집에 모신 이순신 장군은 장례를 치르지 못하고 어떤 신분으로 길을 떠나야 했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">백의종군</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 43 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 43</h2>
+            <p class="question">1597년 9월, 경상 수사 배설은 어떤 핑계를 대고 진영에서 도망쳤나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">병 때문에 몸조리를 하겠다는 핑계</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 44 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 44</h2>
+            <p class="question">명량해전에서 이순신 장군이 "네가 군법에 죽고 싶으냐?"라고 꾸짖자 일본군 배를 향해 쳐들어간 장수는 누구인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">거제 군수 안위</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 45 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 45</h2>
+            <p class="question">명량해전 이후 이순신 장군은 아들 회를 집으로 보냈습니다. 고향집이 어떻게 되었다는 소식을 들었기 때문인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">집들이 불타 버리고 잿더미만 남았다는 소식</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 46 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 46</h2>
+            <p class="question">이순신 장군에게 '증손전수방략'이라는 책을 보내준 좌의정의 이름은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">유성룡</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 47 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 47</h2>
+            <p class="question">임진왜란 때 조선이 사용했던 화포의 이름 중 '천자포', '지자포' 외에 한 가지만 더 말해보세요.</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">현자포 (또는 황자포, 승자포)</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 48 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 48</h2>
+            <p class="question">1597년 10월, 이순신 장군이 편지를 받고 전사한 것을 알게 된 아들의 이름은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">면</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 49 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 49</h2>
+            <p class="question">명량해전에서 우리 수군 13척을 둘러싼 일본군의 배는 몇 척이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">130여 척</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 50 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 50</h2>
+            <p class="question">명량해전에서 붉은 비단 옷을 입고 있다가 전사한 일본 장수의 이름은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">마다시</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 51 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 51</h2>
+            <p class="question">1593년 5월, 원균의 부하 기효근이 나라가 위태로운 전쟁 중에 배 안에서 한 어이없는 행동은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">어린 계집을 태우고 놀아났다.</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 52 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 52</h2>
+            <p class="question">1593년 5월, 이순신 장군은 어머니께 편지와 함께 '이것' 50가닥을 보냈습니다. '이것'은 무엇일까요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">미역</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 53 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 53</h2>
+            <p class="question">1598년 11월 14일, 일본 장수가 명나라 도독 진린에게 선물한 것은 무엇인가요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">돼지 두 마리와 술 두 통</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 54 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 54</h2>
+            <p class="question">이순신 장군은 전쟁 중 틈만 나면 병사들과 함께 어떤 훈련을 했나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">활쏘기 훈련</p>
+                </div>
+            </details>
+        </div>
+        <!-- 문제 55 -->
+        <div class="slide">
+            <h2 class="slide-header">문제 55</h2>
+            <p class="question">1598년 11월 19일, 노량 앞바다에서 마지막 전투 중 총에 맞고 쓰러진 이순신 장군이 남긴 마지막 말은 무엇이었나요?</p>
+            <details>
+                <summary>정답 보기</summary>
+                <div class="answer-box">
+                    <p class="answer-text">"지금은 한창 싸움 중이다. 내가 죽었다는 것을 알리지 말라!"</p>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+</body>
+</html>
